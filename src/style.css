@@ -1,0 +1,9 @@
+:root.light-theme {
+    font-family: "Poppins", sans-serif;
+    color-scheme: light;
+  }
+  
+  :root.dark-theme{
+    font-family: "Poppins", sans-serif;
+    color-scheme: dark;
+  }
