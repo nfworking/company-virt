@@ -1,7 +1,46 @@
 import { CheckCircle2 } from "lucide-react";
 import { pricingOptions } from "../constants";
+import { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js";
 
+let stripePromise;
+
+ const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+  }
+
+   return stripePromise;
+ };
+
+   
 const Pricing = () => {
+  const [stripeError, setStripeError] = useState(null);
+   const [isLoading, setLoading] = useState(false);
+  const item = {
+     price: "prod_QxESMeuAAybyTI",
+    quantity: 1
+  };
+
+   const checkoutOptions = {
+    lineItems: [item],
+    mode: "payment",
+   successUrl: `${window.location.origin}`,
+    cancelUrl: `${window.location.origin}`
+ };
+
+   const redirectToCheckout = async () => {
+     setLoading(true);
+     console.log("redirectToCheckout");
+
+     const stripe = await getStripe();
+     const { error } = await stripe.redirectToCheckout(checkoutOptions);
+     console.log("Stripe checkout error", error);
+
+     if (error) setStripeError(error.message);
+     setLoading(false);
+   };
+   if (stripeError) alert(stripeError);
   return (
     <div className="mt-20">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wide transition-all duration-1300 dark:text-white">
@@ -31,12 +70,12 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#"
+              <button
+               onClick={redirectToCheckout}
                 className="inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl hover:bg-orange-900 border border-orange-900 rounded-lg transition duration-200"
               >
                 Subscribe
-              </a>
+              </button>
             </div>
           </div>
         ))}
