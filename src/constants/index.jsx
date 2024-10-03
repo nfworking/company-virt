@@ -63,7 +63,7 @@ export const features = [
     icon: <BotMessageSquare />,
     text: "Drag-and-Drop Interface",
     description:
-      "Easily design and arrange your VR environments with a user-friendly drag-and-drop interface.",
+      "Easily design and arrange your CODE environments with a user-friendly drag-and-drop interface.",
   },
   {
     icon: <Fingerprint />,
@@ -75,7 +75,7 @@ export const features = [
     icon: <ShieldHalf />,
     text: "Built-in Templates",
     description:
-      "Jumpstart your VR projects with a variety of built-in templates for different types of applications and environments.",
+      "Jumpstart your CODE projects with a variety of built-in templates for different types of applications and environments.",
   },
   {
     icon: <BatteryCharging />,
@@ -101,29 +101,29 @@ export const checklistItems = [
   {
     title: "Code merge made easy",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Track the performance of your Windows apps and gain insights into user behavior.",
   },
   {
     title: "Review code without worry",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Track the performance of your Windows apps and gain insights into user behavior.",
   },
   {
     title: "AI Assistance to reduce time",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Track the performance of your Windows apps and gain insights into user behavior.",
   },
   {
     title: "Share work in minutes",
     description:
-      "Track the performance of your VR apps and gain insights into user behavior.",
+      "Track the performance of your Windows apps and gain insights into user behavior.",
   },
 ];
 
 export const pricingOptions = [
   {
-    title: "Free",
-    price: "$0",
+    title: "Basic",
+    price: "$10",
     features: [
       "Private board sharing",
       "5 Gb Storage",
@@ -143,7 +143,7 @@ export const pricingOptions = [
   },
   {
     title: "Enterprise",
-    price: "$200",
+    price: "$250",
     features: [
       "Private board sharing",
       "Unlimited Storage",
@@ -154,25 +154,25 @@ export const pricingOptions = [
 ];
 
 export const resourcesLinks = [
-  { href: "#", text: "Getting Started" },
-  { href: "#", text: "Documentation" },
-  { href: "#", text: "Tutorials" },
-  { href: "#", text: "API Reference" },
-  { href: "#", text: "Community Forums" },
+  { href: "/Getting_Started/", text: "Getting Started" },
+  { href: "/Documentation/", text: "Documentation" },
+  { href: "/Tutorials/", text: "Tutorials" },
+  { href: "/API_Reference/", text: "API Reference" },
+  { href: "/Comminuty_Forums/", text: "Community Forums" },
 ];
 
 export const platformLinks = [
-  { href: "#", text: "Features" },
-  { href: "#", text: "Supported Devices" },
-  { href: "#", text: "System Requirements" },
-  { href: "#", text: "Downloads" },
-  { href: "#", text: "Release Notes" },
+  { href: "/Features/", text: "Features" },
+  { href: "/Supported_Devices/", text: "Supported Devices" },
+  { href: "/System_Requirements/", text: "System Requirements" },
+  { href: "/Downloads/", text: "Downloads" },
+  { href: "/Release_Notes/", text: "Release Notes" },
 ];
 
 export const communityLinks = [
-  { href: "#", text: "Events" },
-  { href: "#", text: "Meetups" },
-  { href: "#", text: "Conferences" },
-  { href: "#", text: "Hackathons" },
-  { href: "#", text: "Jobs" },
+  { href: "/Events/", text: "Events" },
+  { href: "/Meetups/", text: "Meetups" },
+  { href: "/Conferences/", text: "Conferences" },
+  { href: "/Hackathons/", text: "Hackathons" },
+  { href: "/Jobs/", text: "Jobs" },
 ];
